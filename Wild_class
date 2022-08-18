@@ -1,0 +1,13 @@
+class Wild(object):
+    def __init__(self, x, y): 
+        self.y = y
+        self.x = x
+    def getX(self):
+        return self.x 
+    def getY(self):
+        return self.y
+X = 7
+Y = 8
+w4 = Wild(X, 18)
+w3 = Wild(17, 18)
+print(w4.getX())
