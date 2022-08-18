@@ -1,0 +1,10 @@
+def getAvailableLetters(lettersGuessed):
+  import string
+  output = ''
+  for l in string.ascii_lowercase:
+    if l not in lettersGuessed:
+      output +=l
+  return output
+
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+print(getAvailableLetters(lettersGuessed))
