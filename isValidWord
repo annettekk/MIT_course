@@ -1,0 +1,29 @@
+def isValidWord(word, hand, wordList):
+    """
+    Returns True if word is in the wordList and is entirely
+    composed of letters in the hand. Otherwise, returns False.
+
+    Does not mutate hand or wordList.
+   
+    word: string
+    hand: dictionary (string -> int)
+    wordList: list of lowercase strings
+    """
+    
+    hand2=hand.copy()
+    if word =='':
+        return False
+    #wordList=loadWords()
+    if word not in wordList:
+        return False
+    else:
+        for l in word:
+            if hand.get(l,False)==False:
+                return False
+                break
+            elif hand2[l]==0:
+                return False
+                break
+            else:
+                hand2[l]-=1
+    return True 
