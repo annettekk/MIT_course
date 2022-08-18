@@ -1,0 +1,12 @@
+def rem_balance(balance,annualInterestRate,monthlyPaymentRate):
+  monthlyInterestRate=annualInterestRate/12
+  rem_bal=balance
+  for i in range(12):
+      min_monthly_payment=monthlyPaymentRate*rem_bal
+      monthly_unpaid_balance=rem_bal-min_monthly_payment
+      rem_bal=monthly_unpaid_balance*(1+monthlyInterestRate)
+  rem_bal = round(rem_bal,2)   
+  return rem_bal
+  # print('Remaining balance: '+ str(rem_bal))
+rem_bal_1 = rem_balance(42,0.2,0.04)
+print('Remaining balance: '+ str(rem_bal_1))
