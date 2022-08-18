@@ -1,0 +1,16 @@
+def genPrimes():
+  x = 2
+  p_list = [2]
+  yield x
+  while True:
+    x += 1
+    flag = False
+    for p in p_list:
+      if (x % p) != 0:
+        flag = True
+      else:
+        flag = False
+        break
+    if flag == True:
+      p_list.append(x)
+      yield x
