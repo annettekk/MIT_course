@@ -1,0 +1,14 @@
+class Person(object):
+  def __init__(self, age, major):
+    self.age = age
+    self.name = 'Ann'
+    self.major = major
+  def __str__(self):
+    return str(self.name) + str(self.age) + str(self.major)
+  def change_major(self, major):
+    self = major
+Anna = Person(35,'CS')
+print(Anna.age)
+print(Anna.name)
+Anna.change_major('Bio')
+print(Anna)
