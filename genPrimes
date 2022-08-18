@@ -14,3 +14,14 @@ def genPrimes():
     if flag == True:
       p_list.append(x)
       yield x
+     
+    
+prime = genPrime()
+print(prime.__next__())
+print(prime.__next__())
+print(prime.__next__())
+print(prime.__next__())
+print(prime.__next__())
+print(prime.__next__())
+print(prime.__next__())
+prime.__next__()
