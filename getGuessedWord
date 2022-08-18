@@ -1,0 +1,11 @@
+def getGuessedWord(secretWord, lettersGuessed):
+ output = ''
+ for l in secretWord:
+        if l in lettersGuessed:
+          output +=l
+        else:
+          output +='_ ' 
+ return output
+secretWord = 'apple' 
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+print(getGuessedWord(secretWord, lettersGuessed))
