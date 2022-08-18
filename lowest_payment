@@ -1,0 +1,14 @@
+def lowest_payment(balance,annualInterestRate):
+  monthlyInterestRate=annualInterestRate/12
+  lowest_payment=10
+  def rem_balance(rem_bal,monthlyInterestRate,lowest_payment):
+    for i in range(12):
+        monthly_unpaid_balance=rem_bal-lowest_payment
+        rem_bal=monthly_unpaid_balance*(1+monthlyInterestRate)
+    return rem_bal
+  rem_bal=int(rem_balance(balance,monthlyInterestRate,lowest_payment))
+  while rem_bal>0:
+    lowest_payment+=10
+    rem_bal=rem_balance(balance,monthlyInterestRate,lowest_payment)
+  print('Lowest Payment: '+ str(lowest_payment))
+lowest_payment(3329,0.2)
